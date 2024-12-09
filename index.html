@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEASY - Electrónicos y Reparación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF5E1; /* Fondo pastel */
+            color: #333;
+        }
+        header {
+            display: flex; /* Flexbox para alinear imagen y texto */
+            align-items: center; /* Centra verticalmente */
+            background-color: #b6e2ff; /* Color del encabezado */
+            padding: 20px;
+        }
+        header img {
+            width: 100px; /* Ajusta el tamaño de la imagen */
+            height: auto; /* Mantiene la proporción */
+            margin-right: 20px; /* Espacio entre la imagen y el texto */
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: white;
+            margin: 0;
+        }
+        header p.slogan {
+            font-weight: bold;
+            font-style: italic;
+            color: #FFFFFF;
+            margin-top: 5px;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+            
+        }
+        section {
+            padding: 40px 20px; /* Espacio alrededor del texto */
+            text-align: center;
+        }
+        h2 {
+            color: #FF4500; /* Color resaltante */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px;
+            background-color: #fff;
+            display: inline-block;
+            width: calc(33% - 40px); /* Tres columnas */
+            vertical-align: top;
+            cursor: pointer; /* Cambia el cursor para indicar que es clickable */
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .contact-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .contact-button:hover {
+            background-color: #45a049;
+        }
+        .features {
+            display: none; /* Oculta las características por defecto */
+            margin-top: 10px;
+            text-align: left; /* Alinea el texto a la izquierda */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            font-weight: bold; /* Derechos reservados en negritas */
+        }
+        @media screen and (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px); /* Dos columnas en pantallas más pequeñas */
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .product {
+                width: 100%; /* Una columna en pantallas pequeñas */
+            }
+        }
+    </style>
+    <script>
+        function toggleFeatures(id) {
+            const features = document.getElementById(id);
+            features.style.display = features.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <img src="001.PNG" alt="Logo HEASY">
+    <div>
+        <h1>HEASY</h1>
+        <p class="slogan">"Siempre en contacto contigo"</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">INICIO</a>
+    <a href="https://www.facebook.com/yourpage" target="_blank">REDES SOCIALES</a>
+    <a href="mision_vision_valores.html">ACERCA DE NOSOTROS</a>
+</nav>
+
+<section id="about">
+    <h2>¿Quiénes Somos?</h2>
+    <p>Somos una empresa dedicada al servicio al cliente y al ámbito comercial, especializados en todas las ramas de informática.</p>
+</section>
+
+<section id="products">
+    <h2>Productos Destacados</h2>
+    <div class="product" onclick="toggleFeatures('features1')">
+        <img src="01.JPG" alt="Producto 1">
+        <h3>Samsung Galaxy Z Fold6</h3>
+        <p>$45,999.00</p>
+        <div id="features1" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 7.6" AMOLED</li>
+                <li>Procesador: Snapdragon 8 Gen 2</li>
+                <li>Cámara: 50 MP triple</li>
+                <li>RAM: 12 GB</li>
+                <li>Almacenamiento: 256/512 GB</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features2')">
+        <img src="02.PNG" alt="Producto 2">
+        <h3>iPhone 16 Pro</h3>
+        <p>$25,999.00</p>
+        <div id="features2" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 6.1" Super Retina XDR</li>
+                <li>Procesador: A17 Bionic</li>
+                <li>Cámara: 48 MP triple</li>
+                <li>RAM: 6 GB</li>
+                <li>Almacenamiento: 128/256/512 GB</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features3')">
+        <img src="01.PNG" alt="Producto 3">
+        <h3>Redmi Note 13 Pro</h3>
+        <p>$6,999.00</p>
+        <div id="features3" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 6.67" AMOLED</li>
+                <li>Procesador: MediaTek Dimensity 1080</li>
+                <li>Cámara: 108 MP cuádruple</li>
+                <li>RAM: 8 GB</li>
+                <li>Almacenamiento: 128 GB</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="more-products">
+    <h2>Últimos en Existencia</h2>
+    <div class="product" onclick="toggleFeatures('features4')">
+        <img src="04.JPG" alt="Producto 4">
+        <h3>Lenovo IdeaPad 3</h3>
+        <p>$12,999.00</p>
+        <div id="features4" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 15.6" Full HD</li>
+                <li>Procesador: Intel Core i5</li>
+                <li>RAM: 8 GB</li>
+                <li>Almacenamiento: 512 GB SSD</li>
+                <li>Gráficos: Intel UHD</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features5')">
+        <img src="05.JPG" alt="Producto 5">
+        <h3>MacBook Pro 16</h3>
+        <p>$49,999.00</p>
+        <div id="features5" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 16" Retina</li>
+                <li>Procesador: Apple M1 Pro</li>
+                <li>RAM: 16 GB</li>
+                <li>Almacenamiento: 512 GB SSD</li>
+                <li>Gráficos: Apple M1 Pro</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features6')">
+        <img src="06.PNG" alt="Producto 6">
+        <h3>PlayStation 5</h3>
+        <p>$16,999.00</p>
+        <div id="features6" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Almacenamiento: 825 GB SSD</li>
+                <li>Resolución: Hasta 8K</li>
+                <li>Incluye: Controlador DualSense</li>
+                <li>Compatibilidad: Juegos de PS4</li>
+                <li>Conectividad: Wi-Fi 6</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features7')">
+        <img src="07.JPG" alt="Producto 7">
+        <h3>Microsoft Surface Pro 9</h3>
+        <p>$25,499.00</p>
+        <div id="features7" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 13" PixelSense</li>
+                <li>Procesador: Intel Core i7</li>
+                <li>RAM: 16 GB</li>
+                <li>Almacenamiento: 512 GB SSD</li>
+                <li>Incluye: Surface Pen</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features8')">
+        <img src="08.PNG" alt="Producto 8">
+        <h3>Acer Aspire 5</h3>
+        <p>$8,999.00</p>
+        <div id="features8" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 15.6" Full HD</li>
+                <li>Procesador: AMD Ryzen 5</li>
+                <li>RAM: 8 GB</li>
+                <li>Almacenamiento: 256 GB SSD</li>
+                <li>Gráficos: Radeon Vega 8</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product" onclick="toggleFeatures('features9')">
+        <img src="09.PNG" alt="Producto 9">
+        <h3>Dell XPS 13</h3>
+        <p>$32,999.00</p>
+        <div id="features9" class="features">
+            <h4>Características:</h4>
+            <ul>
+                <li>Pantalla: 13.4" FHD+</li>
+                <li>Procesador: Intel Core i7</li>
+                <li>RAM: 16 GB</li>
+                <li>Almacenamiento: 1 TB SSD</li>
+                <li>Gráficos: Intel Iris Xe</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contacto</h2>
+    <p>Para más información, ¡no dudes en contactarnos!</p>
+    <a href="mailto:williambreton966@gmail.com" class="contact-button">Contáctanos</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 HEASY. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
